@@ -9,11 +9,12 @@
 body {
   height: 100vh;
   font-family:
+    "Playfair Display",
+    Roboto,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
     Oxygen,
     Ubuntu,
     Cantarell,
