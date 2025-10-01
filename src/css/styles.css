@@ -7,7 +7,8 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   font-family:
     "Playfair Display",
     Roboto,
@@ -22,4 +23,23 @@ body {
     "Helvetica Neue",
     sans-serif;
   background-color: #212121;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 1px solid red;
+}
+
+header,
+main,
+footer {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+}
+
+.container {
+  width: clamp(320px, 90%, 1200px);
+  padding: 1rem;
+  border: 1px solid green;
 }
