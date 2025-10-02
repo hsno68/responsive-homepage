@@ -33,7 +33,16 @@ body {
 }
 
 .image-wrapper img {
+  height: auto;
   display: block;
+}
+
+header .image-wrapper img {
+  max-width: 320px;
+}
+
+footer .image-wrapper img {
+  max-width: 800px;
 }
 
 .image-wrapper span,
@@ -59,13 +68,27 @@ body {
 .text-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+header .text-wrapper {
   gap: 0.5rem;
+}
+
+footer .text-wrapper {
+  gap: 1rem;
 }
 
 .text-wrapper nav {
   display: flex;
-  justify-content: flex-end;
   gap: 1rem;
+}
+
+header .text-wrapper nav {
+  justify-content: flex-end;
+}
+
+footer .text-wrapper nav {
+  justify-content: flex-start;
 }
 
 .text-wrapper img {
