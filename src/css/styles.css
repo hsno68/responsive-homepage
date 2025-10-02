@@ -78,6 +78,12 @@ footer .text-wrapper {
   gap: 1rem;
 }
 
+footer .text-wrapper p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .text-wrapper nav {
   display: flex;
   gap: 1rem;
