@@ -23,9 +23,10 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  width: clamp(320px, 100%, 1400px);
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .image-wrapper {
@@ -33,20 +34,14 @@ body {
 }
 
 .image-wrapper img {
+  width: 100%;
   height: auto;
   display: block;
 }
 
-header .image-wrapper img {
-  max-width: 320px;
-}
-
-footer .image-wrapper img {
-  max-width: 800px;
-}
-
 .image-wrapper span,
-.text-wrapper h1 {
+.text-wrapper h1,
+.text-wrapper h2 {
   font-family: "Playfair Display", var(--font-stack);
 }
 
@@ -54,7 +49,7 @@ footer .image-wrapper img {
   width: 100%;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   text-align: center;
   text-wrap: nowrap;
   text-shadow:
@@ -65,17 +60,16 @@ footer .image-wrapper img {
   bottom: 0;
 }
 
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 header .text-wrapper {
-  gap: 0.5rem;
+  flex: 1;
 }
 
-footer .text-wrapper {
-  gap: 1rem;
+header .text-wrapper > * {
+  margin: 1rem;
+}
+
+footer .text-wrapper > * {
+  margin: 0.5rem;
 }
 
 footer .text-wrapper p {
@@ -98,6 +92,24 @@ footer .text-wrapper nav {
 }
 
 .text-wrapper img {
-  max-width: 2rem;
+  width: clamp(1rem, 5vw, 2rem);
   height: auto;
+}
+
+/* Main */
+
+main .container {
+  flex-direction: column;
+  align-items: normal;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card img {
+  width: 100%;
+  display: block;
 }
